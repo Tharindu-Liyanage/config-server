@@ -5,4 +5,6 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    ip-address: 192.168.8.124  # Manually set your machine's static IP
+    instance-id: 192.168.8.124:${spring.application.name}:${server.port}
